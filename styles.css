@@ -1,0 +1,89 @@
+html, body {
+    height: 100%; /* Full height for html and body */
+    margin: 0; /* Reset margin */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+}
+
+.container {
+    flex-grow: 1; /* Allow the container to take available space */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.calculator {
+    background-color: #ffffff; /* White background for the calculator */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 320px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 32px;
+    text-align: right;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #e9e9e9; /* Light gray display */
+    color: #333; /* Dark text */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f5; /* Light gray background for buttons */
+    color: #333; /* Dark text */
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #d4d4d8; /* Darker gray on hover */
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:nth-child(1) {
+    background-color: #ff3b3b; /* Clear button */
+    color: white; /* White text for clear button */
+}
+
+button:nth-child(1):hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
+button:nth-child(17) {
+    background-color: #4caf50; /* Equals button */
+    color: white; /* White text for equals button */
+}
+
+button:nth-child(17):hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff3b3b; /* Red footer color */
+    color: white;
+    width: 100%;
+}
